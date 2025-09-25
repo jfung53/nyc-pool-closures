@@ -9,3 +9,5 @@ One thing stood out to me immediately: larger pools were closed for more hours, 
 [Outdoor Pools Session Information](https://data.cityofnewyork.us/Recreation/Outdoor-Pools-Session-Information/82jf-bykm/about_data) as of January 15, 2025
 
 [NYC Parks Pools](https://data.cityofnewyork.us/Recreation/NYC-Parks-Pools/y5rm-wagw/about_data) as of September 20, 2025
+
+[Directory of Indoor Swimming Pools](https://data.cityofnewyork.us/Recreation/Directory-of-Indoor-Swimming-Pools/x57r-az25/about_data) and [Directory of Outdoor Swimming Pools](https://data.cityofnewyork.us/Recreation/Directory-of-Outdoor-Swimming-Pools/fx7a-24mf/about_data)
