@@ -3,11 +3,17 @@
 
     <head>
 
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CHART</title>
+        <meta name="description" content="nyc outdoor pool data visualization">
+        <meta name="keywords" content="pratt, data, visualization, nyc, pool">
+        <meta name="author" content="Jocelyn Fung">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
 
-        <link rel="stylesheet" href="style.css">
+
+        <title>Chart.js Lab 1 Assignment</title>
+
         
         <!-- connects to chart.js library from a cdn -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -27,31 +33,86 @@
 
 
         <h1>NYC Outdoor Pool Closures and Incidents</h1>
+
         <p>Summer of 2024. Insert introductory blurb. This is a <a href="https://www.pratt.edu/" target=_blank>test link</a> to be replaced by something interesting later.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
 
         <!-- add flex boxes later for better spacing between containers -->
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Incidents per session placeholder chart</h2>
-            <p>Pool size (pooltype) and incidents (category 1 + category 2) per session per pooltype</p>
+            <h2><span class="dot-divider"></span> Pool types</h2>
+
+            <h3>BAR CHART</h3>
+            <p>
+                Number of pools (y axis) per pooltype (x axis)<br/>
+                Sort descending from L to R
+            </p>
             <canvas id = "chart1" width="200" height="200"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Frequency of incidents per pool placeholder</h2>
+            <h2><span class="dot-divider"></span> The largest and smallest pools</h2>
+
+            <h3>BAR CHART</h3>
             <p>
-                Sort descending by frequency<br/>
-                Colour by pooltype
+                3 largest and 3 smallest pools<br/>
+                Cubic feet (y axis)<br/>
+                Multi-line labels: pool name and borough (x axis)<br/>
+                Sort descending from L to R
             </p>
             <canvas id = "chart2" width="200" height="200"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> This is the third chart placeholder</h2>
-            <h4>Example of how to load external data through D3</h4>
+            <h2><span class="dot-divider"></span> Pool attendance numbers</h2>
+
+            <h3>HORIZONAL BAR CHART</h3>
+            <p>
+                One pool per bar<br/>
+                Sort descending by average attendance numbers per session per day<br/>
+                Label each bar with pool name and borough
+            </p>
             <canvas id = "chart3" width="200" height="200"></canvas>
         </div>
+        
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> Number of pool closures per week due to poop incidents</h2>
+
+            <h3>STACKED BAR CHART WITH GROUPS</h3>
+            <p>
+                <a href="https://www.chartjs.org/docs/latest/samples/bar/stacked-groups.html">Chart.js example</a><br/>
+                Pool season is from end of June to beginning of September<br/>
+                1 bar per week on x axis, grouped and labeled by month<br/>
+                Number of incidents on y axis (category 1 and category 2, stacked)
+            </p>
+            <canvas id = "chart4" width="200" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> Pools with the most poop incidents</h2>
+
+            <h3>HORIZONAL BAR CHART + LINE CHART COMBO</h3>
+            <p>
+                Top 10 offending pools<br/>
+                One pool per bar<br/>
+                Sort descending by number of incidents per pool (aka bar size)<br/>
+                Label each bar with pool name and borough
+            </p>
+            <canvas id = "chart5" width="200" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> Number of poop incidents by pool size</h2>
+
+            <h3>SCATTER CHART</h3>
+            <p>
+                Pool size from smallest to largest on x axis<br/>
+                Number of poop incidents from fewest to most on y axis<br/>
+            </p>
+            <canvas id = "chart6" width="200" height="200"></canvas>
+        </div>
+
+
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
         <br/><br/><br/><br/>
@@ -60,5 +121,8 @@
         <script src="chart1.js"></script>
         <script src="chart2.js"></script>
         <script src="chart3.js"></script>
+        <script src="chart4.js"></script>
+        <script src="chart5.js"></script>
+        <script src="chart6.js"></script>
 
     </body>
