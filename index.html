@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHART</title>
+
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- connects to chart.js library from a cdn -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- D3 for loading and transforming an external dataset -->
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <!-- hammer.js for interactions, needs to go first -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- plugin to zoom in -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.2.0/chartjs-plugin-zoom.min.js" integrity="sha512-FRGbE3pigbYamZnw4+uT4t63+QJOfg4MXSgzPn2t8AWg9ofmFvZ/0Z37ZpCawjfXLBSVX2p2CncsmUH2hzsgJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    </head>
+
+    <body>
+        
+        <h6>[ INFO 616 Lab 1 Chart.js Assignment ]</h6>
+        <h6>[ Fall Semester 2025 ]</h6>
+
+
+        <h1>NYC Outdoor Pool Closures and Incidents</h1>
+        <p>Summer of 2024. Insert introductory blurb. This is a <a href="https://www.pratt.edu/" target=_blank>test link</a> to be replaced by something interesting later.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
+
+        <!-- add flex boxes later for better spacing between containers -->
+
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> Incidents per session placeholder chart</h2>
+            <p>Pool size (pooltype) and incidents (category 1 + category 2) per session per pooltype</p>
+            <canvas id = "chart1" width="200" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> Frequency of incidents per pool placeholder</h2>
+            <p>
+                Sort descending by frequency<br/>
+                Colour by pooltype
+            </p>
+            <canvas id = "chart2" width="200" height="200"></canvas>
+        </div>
+
+        <div class="chart-container">
+            <h2><span class="dot-divider"></span> This is the third chart placeholder</h2>
+            <h4>Example of how to load external data through D3</h4>
+            <canvas id = "chart3" width="200" height="200"></canvas>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
+        <br/><br/><br/><br/>
+
+
+        <script src="chart1.js"></script>
+        <script src="chart2.js"></script>
+        <script src="chart3.js"></script>
+
+    </body>

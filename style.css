@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --not-black: #1E1E1E;
+}
+
+/*
+* {
+    border: 1px dashed red;
+}
+*/
+
+body {
+    width: 80%;
+    margin: auto;
+    padding-top: 72px;
+    background: ivory;
+    font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+    /* color: var(--not-black); */
+    color: royalblue;
+    line-height: 1.5;
+}
+
+.chart-container {
+    width: 50%;
+}
+
+h1, h4, h5 {
+    /* color: var(--not-black); */
+    color: royalblue;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+h6 {
+    margin: 0;
+    font-weight: 400;
+    opacity: 60%;
+    text-transform: uppercase;
+}
+
+a {
+    /* color: var(--not-black); */
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: 600;
+}
+
+.dot-divider {
+    height: 24px;
+    width: 24px;
+    background-color: royalblue;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
