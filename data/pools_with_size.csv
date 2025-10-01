@@ -1,0 +1,78 @@
+Prop_ID,Name,Location,Phone,POOLTYPE,Setting,Size,Accessible,lat,lon,rec_center_id,Borough_Code,Borough_Name,cubic_feet
+M037,Highbridge,Amsterdam Ave. and W. 173rd Street,(212) 927-2400,Olympic,Outdoor,220' x 162' x 10.5',Y,40.8426,-73.9339,,M,Manhattan,374220.0
+B008,Betsy Head,"Boyland, Livonia and Dumont Avenues",(718) 257-1635/6,Olympic,Outdoor,330' x 165' x 4.25,Y,40.6629,-73.9127,,B,Brooklyn,231412.5
+B058,McCarren,McCarren Park,(718) 218-2380,Olympic,Outdoor,329' x 151' x 4.6',Y,40.7201,-73.9495,,B,Brooklyn,228523.4
+Q004,Astoria,19th Street and 23rd Drive,(718) 626-8620,Olympic,Outdoor,330' x 165' x 4',Y,40.7788,-73.9227,,Q,Queens,217800.0
+B126,Red Hook,Bay and Henry Streets,(718) 722-3211,Olympic,Outdoor,330' x 130' x 4',Y,40.6727,-74.0039,B126,B,Brooklyn,171600.0
+X010,Crotona,173rd Street and Fulton Avenue,(718) 731-6872,Olympic,Outdoor,330' x 120' x 4',Y,40.8399,-73.8981,X010,X,Bronx,158400.0
+B087,Sunset Park,Seventh Avenue between 41st and 44th Streets,(718) 972-2180,Olympic,Outdoor,259' x 162' x 3.5',Y,40.6472,-74.0026,B087,B,Brooklyn,146853.0
+M047,Thomas Jefferson,E. 112th Street and First Avenue,(212) 860-1372,Olympic,Outdoor,239' x 97' x 4',Y,40.7933,-73.9359,,M,Manhattan,92732.0
+B351,Kosciuszko,Marcy Avenue between DeKalb Avenue & Kosciuszko Street,(718) 622-5271,Olympic,Outdoor,230' x 100' x 4',Y,40.6912,-73.9496,,B,Brooklyn,92000.0
+M014,Jackie Robinson,Bradhurst Avenue and W. 146th Street,(212) 234-9606,Olympic,Outdoor,235' x 82' x 3.5',Y,40.8242,-73.9428,M014,M,Manhattan,67445.0
+X092,Van Cortlandt,W. 242nd St. and Broadway,(718) 548-2415,Olympic,Outdoor,164' x 104' x 3.6',Y,40.8904,-73.896,,X,Bronx,61401.6
+R043,Lyons,Pier 6 and Victory Boulevard,(718) 816-5255,Olympic,Outdoor,165' x 100' x 3.5',Y,40.6369,-74.0743,R043-NMD01,R,Staten Island,57750.0
+M033,Hamilton Fish,Pitt Street and Houston Street,(212) 387-7691,Olympic,Outdoor,165' x 98' x 3.5',Y,40.7197,-73.9805,M033,M,Manhattan,56595.0
+R008,Faber,Faber Street and Richmond Terrace,(718) 816-5259,Intermediate,Outdoor,140' x 76' x 5',Y,40.6412,-74.1353,,R,Staten Island,53200.0
+M058,Marcus Garvey,124th Street and Fifth Avenue,(212) 410-2818,Intermediate,Outdoor,165' x 75' x 4',Y,40.8052,-73.9434,,M,Manhattan,49500.0
+M103,Tony Dapolito Outdoor,Clarkson St. and Seventh Ave. South,(646) 300-2271,Intermediate,Outdoor,100' x 50' x 9',Y,40.7296,-74.0054,,M,Manhattan,45000.0
+M037,Highbridge,Amsterdam Ave. and W. 173rd Street,(212) 927-2400,Wading,Outdoor,220' x 92' x 2',N,40.8424,-73.9334,,M,Manhattan,40480.0
+M045,John Jay,East of York Avenue on 77th St.,(646) 522-1538,Intermediate,Outdoor,145' x 49' x 4',Y,40.7696,-73.949,,M,Manhattan,28420.0
+M164,Asser Levy,Asser Levy Place and E. 23rd Street,(212) 447-2020,Intermediate,Outdoor,120' x 45' x 4',Y,40.7358,-73.9754,M164,M,Manhattan,21600.0
+M045,John Jay,East of York Avenue on 77th St.,(646) 522-1538,Diving,Outdoor,60' x 40' x 8',N,40.7694,-73.9489,,M,Manhattan,19200.0
+X307,Floating,Tiffany Street & Viele Avenue,(646) 831-6759,Intermediate,Outdoor,82' x 52' x 4',Y,40.8044,-73.8889,X307,X,Bronx,17056.0
+M033,Hamilton Fish,Pitt Street and Houston Street,(212) 387-7691,Wading,Outdoor,67' x 98' x 2.5',N,40.7198,-73.981,M033,M,Manhattan,16415.0
+X196,Haffen,Ely and Burke Avenues,(718) 379-2908,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.8743,-73.8392,,X,Bronx,15750.0
+X008,Claremont,170th Street and Clay Avenue,(718) 901-4792,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.839,-73.9073,,X,Bronx,15750.0
+X289,Mapes,E. 180th Street between Mapes &amp; Prospect Avenues,(718) 364-8876,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.8465,-73.886,,X,Bronx,15750.0
+Q441,Fisher,99th Street and 32nd Avenue,(718) 779-8356,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.7589,-73.8696,,Q,Queens,15750.0
+M190,Sheltering Arms,W. 129th Street and Amsterdam Ave.,(212) 662-6191,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.8148,-73.9557,,M,Manhattan,15750.0
+R110,Tottenville,Hylan Boulevard and Joline Avenue,(718) 356-8242,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.5056,-74.2352,,R,Staten Island,15750.0
+X034,Foster,E. 164th St. bet. Jerome &amp; River Aves.,(646) 678-1938,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.8317,-73.9243,X034,X,Bronx,15750.0
+M273,Wagner,E. 124th Street between First and Second Avenues,(212) 534-4238,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.802,-73.933,,M,Manhattan,15750.0
+R109,West Brighton,Henderson Avenue between Broadway and Chappel Streets,(718) 816-5019,Intermediate,Outdoor,75' x 60' x 3.5',Y,40.6371,-74.1193,,R,Staten Island,15750.0
+M103,Tony Dapolito Outdoor,Clarkson St. and Seventh Ave. South,(646) 300-2271,Diving,Outdoor,35' x 47' x 9',N,40.7296,-74.0054,M103,M,Manhattan,14805.0
+B260,Howard,"Glenmore and Mother Gaston Blvd., East New York Avenue",(718) 385-1023,Intermediate,Outdoor,75' x 60' x 3',Y,40.6727,-73.9089,,B,Brooklyn,13500.0
+Q121,Liberty,173rd Street and 106th Avenue,(718) 657-4995,Intermediate,Outdoor,75' x 60' x 3',Y,40.7016,-73.7839,,Q,Queens,13500.0
+B310,Bushwick,"Humboldt Street, Flushing &amp; Bushwick Avenues",(718) 452-2116,Intermediate,Outdoor,75' x 60' x 3',Y,40.7019,-73.9398,,B,Brooklyn,13500.0
+B021,Commodore Barry,"Flushing and Park Avenues, Navy and North Elliot Streets",(718) 243-2593,Intermediate,Outdoor,75' x 60' x 3',Y,40.6976,-73.9782,,B,Brooklyn,13500.0
+M270,Dry Dock,E. 10th St. between Aves. C and D,(212) 677-4481,Intermediate,Outdoor,75' x 60' x 3',Y,40.7254,-73.9755,,M,Manhattan,13500.0
+B145,Douglass and DeGraw,Third Avenue and Nevins Street,(718) 625-3268,Intermediate,Outdoor,75' x 60' x 3',Y,40.6802,-73.9857,,B,Brooklyn,13500.0
+Q458,Fort Totten,338 Story Avenue,(718) 224-4031,Diving,Outdoor,35' x 35' x 10.5',N,40.7922,-73.7746,Q458,Q,Queens,12862.5
+Q458,Fort Totten,338 Story Road,(718) 224-4031,Intermediate,Outdoor,75' x 40' x 4',Y,40.7922,-73.7747,Q458,Q,Queens,12000.0
+M047,Thomas Jefferson,E. 112th Street and First Avenue,(212) 860-1372,Wading,Outdoor,48' x 97' x 1.5',N,40.7935,-73.9365,,M,Manhattan,6984.0
+M273,Wagner,E. 124th Street between First and Second Avenues,(212) 534-4238,Wading,Outdoor,24' x 24' x 9,N,40.802,-73.9333,,M,Manhattan,5184.0
+R061,Maggie Howard,Tompkins Ave. btwn Hill &amp; Broad Sts.,(718) 448-5969,Mini,Outdoor,55' x 30' x 3',Y,40.6228,-74.0793,,R,Staten Island,4950.0
+M193,Abe Lincoln,5th Avenue &amp; E. 135th Street,(212) 491-1714,Mini,Outdoor,50' x 30' x 3',Y,40.8121,-73.9372,,M,Manhattan,4500.0
+B269,Jesse Owens,117 Stuyvesant Avenue,(718) 452-0519,Mini,Outdoor,55' x 30' x 2.5',Y,40.6917,-73.9323,,B,Brooklyn,4125.0
+X165,Edenwald Houses,Schieffelin Avenue &amp; E. 229th Street,718-515-2160,Mini,Outdoor,40' x 30' x 3',Y,40.8843,-73.8453,,X,Bronx,3600.0
+X159,Captain Thompson,E. 174th Street &amp; Bronx River Avenue,(718) 378-1597,Mini,Outdoor,43' x 25.5' x 3',N,40.8342,-73.8778,,X,Bronx,3289.5
+M069,Vesuvio,Thompson St. between Spring &amp; Prince Streets,(212) 343-0959,Mini,Outdoor,43' x 25.5' x 3',Y,40.7256,-74.0024,,M,Manhattan,3289.5
+B351,Kosciuszko,Marcy Avenue between DeKalb Avenue & Kosciuszko Street,(718) 622-5271,Wading,Outdoor,42' x 52' x 1.5',N,40.691,-73.9503,,B,Brooklyn,3276.0
+M220,Frederick Douglass,Amsterdam Ave. between 100th &amp; 102nd Streets,(212) 316-3241,Mini,Outdoor,40' x 20' x 3',Y,40.7969,-73.9678,,M,Manhattan,2400.0
+R067,General Douglas,Jefferson Street &amp; Seaver Avenue,(718) 987-9800,Mini,Outdoor,40' x 20' x 3',N,40.5859,-74.1006,,R,Staten Island,2400.0
+M088,Tompkins Square,Ave. A between E. 7th &amp; E. 10th Streets,(212) 387-6784,Mini,Outdoor,40' x 20' x 3',N,40.7269,-73.981,,M,Manhattan,2400.0
+Q364,Marie Curie Park,211th Street &amp; 46th Avenue,(718) 423-0762,Mini,Outdoor,40' x 20' x 3',N,40.7569,-73.7716,,Q,Queens,2400.0
+Q031,Windmuller,54th Street &amp; 39th Road,(718) 651-8247,Mini,Outdoor,40' x 20' x 3',N,40.7475,-73.9107,,Q,Queens,2400.0
+B248,David Fox/PS 251,E. 54th Street &amp; Avenue H,(718) 531-2437,Mini,Outdoor,40' x 20' x 3',N,40.6327,-73.9237,,B,Brooklyn,2400.0
+B236,Glenwood Houses,Farragut Road &amp; Ralph Avenue,(718) 531-2480,Mini,Outdoor,40' x 20' x 3',N,40.6365,-73.9202,,B,Brooklyn,2400.0
+R063,PS 46 Playground,Parkinson Avenue &amp; Kramer Street,(718) 448-8694,Mini,Outdoor,40' x 20' x 3',N,40.5952,-74.0816,,R,Staten Island,2400.0
+B329,Lindower Park,"E. 60th St, Mill Rd. &amp; Strickland Avenue",(718) 531-4852,Mini,Outdoor,40' x 20' x 3',N,40.6124,-73.9113,,B,Brooklyn,2400.0
+Q327,PS 186 Playground,Little Neck Parkway &amp; 72nd Avenue,(718) 347-2945,Mini,Outdoor,40' x 20' x 3',N,40.7498,-73.7206,,Q,Queens,2400.0
+B253,PS 20 Playground,Between Clermont Ave. &amp; Adelphi St.,(718) 625-6101,Mini,Outdoor,40' x 20' x 3',N,40.6904,-73.9706,,B,Brooklyn,2400.0
+X092,Van Cortlandt,W. 242nd St. and Broadway,(718) 548-2415,Wading,Outdoor,48' x 48' x 1',Y,40.8899,-73.896,,X,Bronx,2304.0
+M164,Asser Levy,Asser Levy Place and E. 23rd Street,(212) 447-2020,Wading,Outdoor,41.67' x 25' x 1.5',N,40.7362,-73.9757,M164,M,Manhattan,1562.625
+B126,Red Hook,Bay and Henry Streets,(718) 722-3211,Wading,Outdoor,50' x 25' x 1',Y,40.673,-74.0043,B126,B,Brooklyn,1250.0
+M270,Dry Dock,E. 10th St. between Aves. C and D,(212) 677-4481,Wading,Outdoor,30' x 20' x 1.5',N,40.7255,-73.9758,,M,Manhattan,900.0
+M190,Sheltering Arms,W. 129th Street and Amsterdam Ave.,(212) 662-6191,Wading,Outdoor,30' x 20' x 1.5',N,40.815,-73.9555,,M,Manhattan,900.0
+R109,West Brighton,Henderson Avenue between Broadway and Chappel Streets,(718) 816-5019,Wading,Outdoor,24' x 24' x 1.5',N,40.6372,-74.119,,R,Staten Island,864.0
+X289,Mapes,180th Street &amp; Prospect Avenue,(646) 823-5185,Wading,Outdoor,27' x 27' x 1',N,40.8467,-73.8862,,X,Bronx,729.0
+B260,Howard,"Glenmore and Mother Gaston Blvd., East New York Avenue",(718) 385-1023,Wading,Outdoor,30' x 20' x 1',N,40.6726,-73.9091,,B,Brooklyn,600.0
+B310,Bushwick,"Humboldt Street, Flushing &amp; Bushwick Avenues",(718) 452-2116,Wading,Outdoor,30' x 20' x 1',N,40.702,-73.9395,,B,Brooklyn,600.0
+X034,Foster,164th St. bet. Jerome &amp; River Avenues,(646) 678-1938,Wading,Outdoor,24' x 24' x 1',N,40.8319,-73.9242,X034,X,Bronx,576.0
+X196,Haffen,Ely and Burke Avenues,(718) 379-2908,Wading,Outdoor,24' x 24 x 1',N,40.8744,-73.8394,,X,Bronx,576.0
+X008,Claremont,170th Street and Clay Avenue,(718) 901-4792,Wading,Outdoor,24' x 24' x 1',N,40.839,-73.9076,,X,Bronx,576.0
+B021,Commodore Barry,"Flushing and Park Avenues, Navy and North Elliot Streets",(718) 243-2593,Wading,Outdoor,24' x 24' x 1',N,40.6978,-73.978,,B,Brooklyn,576.0
+B145,Douglass and DeGraw,Third Avenue and Nevins Street,(718) 625-3268,Wading,Outdoor,24' x 24' x 1',N,40.6804,-73.9859,,B,Brooklyn,576.0
+Q458,Fort Totten,338 Story Avenue,(718) 224-4031,Wading,Outdoor,20' (round) x 1.5',None,40.7924,-73.7746,Q458,Q,Queens,471.23889803846896
+Q121,Liberty,173rd Street and 106th Avenue,(718) 657-4995,Wading,Outdoor,20' x 20' x 1',N,40.7018,-73.7841,,Q,Queens,400.0
+Q441,Fisher,99th Street and 32nd Avenue,(718) 779-8356,Wading,Outdoor,20' x 20' x 1',N,40.7589,-73.8693,,Q,Queens,400.0

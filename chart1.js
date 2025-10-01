@@ -1,6 +1,14 @@
-// PLACEHOLDER CHART 1
+// CHART 1: POOL TYPES
+// Bar Chart
+// Number of pools (y axis) per pool type (x axis)
+// Sort descending from L to R
+ 
+
+// this seemed to persist across all the charts regardless of which script file i put it in, which is a bonus?
+Chart.defaults.font.family = 'IBM Plex Mono';
 
 const canvas = document.getElementById('chart1');
+
 
 // instantiate new chart instance with two arguments:
 // 1. canvas element where chart will be rendered
@@ -8,54 +16,46 @@ const canvas = document.getElementById('chart1');
 chart_1 = new Chart (canvas, {
     type: 'bar',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Intermediate', 'Wading', 'Mini', 'Olympic', 'Large', 'Diving', 'Intermediate & Diving', 'Olympic & Diving'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
+            label: 'number of pools',
+            data: [27, 23, 17, 14, 5, 2, 1, 1],
         }]
     },
-    
     options: {
-        plugins: {
-            tooltip: true,
-            zoom: {
-                pan: {
-                    enabled: false,
-                    mode: 'xy',
-                },
-                // drag to zoom in
-                zoom: {
-                    drag: {
-                    enabled: true,
-                    borderColor: 'rgb(54, 162, 235)',
-                    borderWidth: 1,
-                    backgroundColor: 'rgba(54, 162, 235, 0.3)',
-                    maintainAspectRatio: false,
-                }
-            }
+        backgroundColor: 'rgba(54, 162, 235, 0.3)',
+        hoverBackgroundColor: 'rgba(30, 144, 255, 0.7)',
+        borderColor: "dodgerblue",
+        borderWidth: 1,
+        animation: {
+            duration: 500,
         }
-    },
-}
+    }
+    
+//     options: {
+//         plugins: {
+//             tooltip: true,
+//             zoom: {
+//                 pan: {
+//                     enabled: false,
+//                     mode: 'xy',
+//                 },
+//                 // drag to zoom in
+//                 zoom: {
+//                     drag: {
+//                     enabled: true,
+//                     borderColor: 'rgb(54, 162, 235)',
+//                     borderWidth: 1,
+//                     backgroundColor: 'rgba(54, 162, 235, 0.3)',
+//                     maintainAspectRatio: false,
+//                 }
+//             }
+//         }
+//     },
+// }
 });
 
 // self made function that just reloads the original chart
-function resetZoom() {
-    chart_1.resetZoom();
-};
+// function resetZoom() {
+//     chart_1.resetZoom();
+// };

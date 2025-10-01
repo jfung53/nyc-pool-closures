@@ -1,61 +1,58 @@
-// PLACEHOLDER CHART 1
+// CHART 4: WEEKLY POOP INCIDENTS
+// Number of pool closures per week due to poop incidents
+// Line Chart
+// weeks on x axis, grouped and labeled by month
+// number of incidents on y axis (category 1 and category 2 lines)
 
 const canvas4 = document.getElementById('chart4');
 
-// instantiate new chart instance with two arguments:
-// 1. canvas element where chart will be rendered
-// 2. options object
-chart_4 = new Chart (canvas4, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
+// read csv via d3 function
+// go live to preview in browser
+d3.csv('data/chart4_weekly_incidents.csv')
+  .then(makeChart4);
+
+function makeChart4(closures) {
+
+    // get csv data and turn it into an array
+    let weeks = closures.map(function(d) {return d.monthname});
+    let category1 = closures.map(function(d) {return d.category_1});
+    let category2 = closures.map(function(d) {return d.category_2});
+    let years = closures.map(function(d) {return d.year});
+
     
-    options: {
-        plugins: {
-            tooltip: true,
-            zoom: {
-                pan: {
-                    enabled: false,
-                    mode: 'xy',
-                },
-                // drag to zoom in
-                zoom: {
-                    drag: {
-                    enabled: true,
-                    borderColor: 'rgb(54, 162, 235)',
+    chart_4 = new Chart (canvas4, {
+        type: 'bar',
+        data: {
+            labels: weeks,
+            datasets: [
+                {
+                    label: 'Category 2 (liquid poop or vomit)',
+                    data: category2,
+                    backgroundColor: 'rgba(139, 69, 19, 0.7)',
+                    borderColor: 'rgba(139, 69, 19, 1)',
                     borderWidth: 1,
-                    backgroundColor: 'rgba(54, 162, 235, 0.3)',
-                    maintainAspectRatio: false,
+                },
+                {
+                    label: 'Category 1 (solid poop)',
+                    data: category1,
+                    backgroundColor: 'rgba(139, 69, 19, 0.3)',
+                    borderColor: 'rgba(139, 69, 19, 0.5)',
+                    borderWidth: 1,
+                },
+            ]
+
+        },
+        options: {
+            hoverBackgroundColor: 'rgba(139, 69, 19, 0.9)',
+            scales: {
+                x: {
+                    stacked: true,
+                },
+                y: {
+                    stacked: true,
                 }
             }
         }
-    },
+    }
+    );
 }
-});
-
-// self made function that just reloads the original chart
-function resetZoom() {
-    chart_4.resetZoom();
-};

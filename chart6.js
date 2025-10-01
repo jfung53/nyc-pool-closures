@@ -1,61 +1,76 @@
-// PLACEHOLDER CHART 1
+// CHART 6: NUMBER OF POOP INCIDENTS BY POOL SIZE
+// SCATTER CHART
+// Pool size from smallest to largest on x axis
+// Number of poop incidents from fewest to most on y axis
 
 const canvas6 = document.getElementById('chart6');
+// d3's function for reading a csv
+d3.csv('data/pool_incidents_cleaned.csv')
+  .then(makeChart6);
 
-// instantiate new chart instance with two arguments:
-// 1. canvas element where chart will be rendered
-// 2. options object
-chart_6 = new Chart (canvas6, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+function makeChart6(by_size) {
+
+        // get csv data and turn it into an array
+        //Prop_ID,cubic_feet,Pool,Borough_Name,category_1,category_2,total_incidents
+        let poolnames = by_size.map(function(d) {return d.Pool});
+        let boroughs = by_size.map(function(d) {return d.Borough_Name});
+        let volume = by_size.map(function(d) {return d.cubic_feet});
+        let incidents_per_pool = by_size.map(function(d) {return d.total_incidents});
+        let incident_colours = by_size.map(function(d) {return d.total_incidents === '0' ? 'rgba(54, 162, 235, 0.7)' : 'rgba(139, 69, 19, 0.7)'});
+
+        chart_6 = new Chart (canvas6, {
+        type: 'scatter',
+        data: {
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    
-    options: {
-        plugins: {
-            tooltip: true,
-            zoom: {
-                pan: {
-                    enabled: false,
-                    mode: 'xy',
+            label: 'At least 1 incident',
+            data: volume.map((v, i) => ({
+                x: parseFloat(v),
+                y: parseFloat(incidents_per_pool[i])
+            })),
+            backgroundColor: incident_colours,
+            pointRadius: 6,
+            pointHoverRadius: 8,
+        }
+        
+        ],
+        },
+        options: {
+            plugins: {
+                legend: {
+                    display: false,
                 },
-                // drag to zoom in
-                zoom: {
-                    drag: {
-                    enabled: true,
-                    borderColor: 'rgb(54, 162, 235)',
-                    borderWidth: 1,
-                    backgroundColor: 'rgba(54, 162, 235, 0.3)',
-                    maintainAspectRatio: false,
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            // Get the index of the data point
+                            const index = context.dataIndex;
+                            // Get the pool name from the poolnames array
+                            const poolName = poolnames[index];
+                            // Get the x and y values
+                            const x = context.parsed.x;
+                            const y = context.parsed.y;
+                            return `${poolName}: (${x}, ${y})`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Pool Size (cubic feet)'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Number of Poop Incidents'
+                    }
                 }
             }
         }
-    },
-}
+
 });
 
-// self made function that just reloads the original chart
-function resetZoom() {
-    chart_6.resetZoom();
-};
+
+}

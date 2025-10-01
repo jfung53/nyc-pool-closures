@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="nyc outdoor pool data visualization">
         <meta name="keywords" content="pratt, data, visualization, nyc, pool">
-        <meta name="author" content="Jocelyn Fung">
+        <meta name="author" content="jocelyn fung">
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -18,7 +18,8 @@
         <!-- connects to chart.js library from a cdn -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <!-- D3 for loading and transforming an external dataset -->
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/d3@7"></script> -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <!-- hammer.js for interactions, needs to go first -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- plugin to zoom in -->
@@ -32,90 +33,75 @@
         <h6>[ Fall Semester 2025 ]</h6>
 
 
-        <h1>NYC Outdoor Pool Closures and Incidents</h1>
+        <h1>NYC's Poopiest Outdoor Public Pools</h1>
 
-        <p>Summer of 2024. Insert introductory blurb. This is a <a href="https://www.pratt.edu/" target=_blank>test link</a> to be replaced by something interesting later.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
+        <div class="intro-container">
+            <h4>Exploratory analysis of the outdoor public pool season data from 2023-2024.</h4> 
 
+            <p>I recently read <a href="https://gothamist.com/news/these-nyc-pools-kept-closing-last-summer-after-people-pooped-in-them" target=_blank>this article</a> from The Gothamist where they mapped the number of hours that pools were closed because people pooped in them. I noticed that some of the larger pools were shut down for more hours. I know that Red Hook Pool, for example, is huge.  Its capacity is over 1,000 people, and it's one of the larger dots on the map.</p>
+            
+            <p>I was curious to see if there's a relationship between the size of a pool and the number of poop incidents, especially since I frequent a bunch of these in the summertime with my two kids. Are there more poop incidents simply because there are more swimmers? Or do some pools just have more offenders, whatever the reason?</p>
+        </div>
         <!-- add flex boxes later for better spacing between containers -->
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Pool types</h2>
-
-            <h3>BAR CHART</h3>
+            <h2><span class="dot-divider"></span> Types of pools</h2>
             <p>
-                Number of pools (y axis) per pooltype (x axis)<br/>
-                Sort descending from L to R
+                Distribution of pool types according to size and purpose. It's unclear what "Intermediate" means exactly, but they represent most of the pools. Wading pools are usually on the same property as a larger pool.
             </p>
-            <canvas id = "chart1" width="200" height="200"></canvas>
+            <canvas id = "chart1" width="300" height="200"></canvas>
         </div>
 
         <div class="chart-container">
             <h2><span class="dot-divider"></span> The largest and smallest pools</h2>
-
-            <h3>BAR CHART</h3>
             <p>
-                3 largest and 3 smallest pools<br/>
-                Cubic feet (y axis)<br/>
-                Multi-line labels: pool name and borough (x axis)<br/>
-                Sort descending from L to R
+                By pool volume in cubic feet.<br/>Click the button to toggle between the two charts.
             </p>
-            <canvas id = "chart2" width="200" height="200"></canvas>
+            <button id="chart2-toggle" type="button" onclick="toggle()">Toggle largest/smallest</button>
+            <canvas id = "chart2" width="300" height="200"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Pool attendance numbers</h2>
-
-            <h3>HORIZONAL BAR CHART</h3>
+            <h2><span class="dot-divider"></span> Swimmers per session</h2>
             <p>
-                One pool per bar<br/>
-                Sort descending by average attendance numbers per session per day<br/>
-                Label each bar with pool name and borough
+                Average number of pool attendees per session.  There are usually two sessions per pool, morning and afternoon.  Some pools have a third extended session, but most don't. 
             </p>
             <canvas id = "chart3" width="200" height="200"></canvas>
         </div>
         
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Number of pool closures per week due to poop incidents</h2>
-
-            <h3>STACKED BAR CHART WITH GROUPS</h3>
+            <h2><span class="dot-divider"></span> Pool closures per week due to poop incidents</h2>
             <p>
-                <a href="https://www.chartjs.org/docs/latest/samples/bar/stacked-groups.html">Chart.js example</a><br/>
-                Pool season is from end of June to beginning of September<br/>
-                1 bar per week on x axis, grouped and labeled by month<br/>
-                Number of incidents on y axis (category 1 and category 2, stacked)
+                The pool seasons opens in the last week of June and runs until mid September.<br/>The parks department defines a Category 1 situation as a solid poop and Category 2 as liquid poop or vomit.  The numbers I ended up with are different than those in the Gothamist article which states that Staten Island's Lyons Pool had 15 poop incidents.</p>
+            <p>
+                It was difficult to accurately count Category 1 incidents outside of the column that incidates that a session opened late because of a problem, so maybe they have more information than I do on how to intepret the data.  There may be many more Category 1 incidents than shown here.  
             </p>
-            <canvas id = "chart4" width="200" height="200"></canvas>
+            <canvas id = "chart4" width="600" height="250"></canvas>
         </div>
 
         <div class="chart-container">
             <h2><span class="dot-divider"></span> Pools with the most poop incidents</h2>
-
-            <h3>HORIZONAL BAR CHART + LINE CHART COMBO</h3>
             <p>
-                Top 10 offending pools<br/>
-                One pool per bar<br/>
-                Sort descending by number of incidents per pool (aka bar size)<br/>
-                Label each bar with pool name and borough
+                As mentioned above, these counts are much more accurate for Category 2 situations. I was horrified to see that Red Hook Pool, my usual haunt, is the one that had the most.  
             </p>
-            <canvas id = "chart5" width="200" height="200"></canvas>
+            <canvas id = "chart5" width="200" height="90"></canvas>
         </div>
 
         <div class="chart-container">
-            <h2><span class="dot-divider"></span> Number of poop incidents by pool size</h2>
-
-            <h3>SCATTER CHART</h3>
+            <h2><span class="dot-divider"></span> Poop incidents by pool size</h2>
             <p>
-                Pool size from smallest to largest on x axis<br/>
-                Number of poop incidents from fewest to most on y axis<br/>
+                Is there a relationship between pool size and number of poops? Maybe. This chart shows a very loose correlation, but without better info about Category 1 situations I'm not sure I'm able to tell for sure.
             </p>
-            <canvas id = "chart6" width="200" height="200"></canvas>
+            <p>
+                Hover over each dot to see the pool name. Blue dots are pools that may have had no poop incidents at all, but that might be due to errors in my counting method. 
+            </p>
+            <canvas id = "chart6" width="200" height="120"></canvas>
         </div>
 
 
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu efficitur dui, malesuada posuere dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam id arcu augue. Nunc semper dui non purus mattis commodo. Suspendisse potenti. Donec pretium sem id venenatis aliquam. Fusce tristique erat erat, vitae posuere enim viverra ac. Nulla efficitur ex urna, in hendrerit risus varius et. Sed vehicula odio lorem, nec lobortis enim gravida cursus. Ut sit amet enim at diam aliquet varius quis at lectus. Aliquam ultricies tellus quis fringilla cursus. Donec porttitor eros nisl, ac malesuada libero molestie et. Integer facilisis gravida nunc, ac venenatis ipsum rutrum at. Nam ornare lorem sapien, at rutrum massa semper quis.</p>
-        <br/><br/><br/><br/>
+        <div class="end-container">
+            <p>Data source: <a href="https://opendata.cityofnewyork.us/data/" target=_blank>NYC Open Data</a></p>
+        </div>
 
 
         <script src="chart1.js"></script>
