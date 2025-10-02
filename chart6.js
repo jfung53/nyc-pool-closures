@@ -4,9 +4,11 @@
 // Number of poop incidents from fewest to most on y axis
 
 const canvas6 = document.getElementById('chart6');
+
 // d3's function for reading a csv
 d3.csv('data/pool_incidents_cleaned.csv')
   .then(makeChart6);
+
 
 function makeChart6(by_size) {
 
@@ -14,9 +16,19 @@ function makeChart6(by_size) {
         //Prop_ID,cubic_feet,Pool,Borough_Name,category_1,category_2,total_incidents
         let poolnames = by_size.map(function(d) {return d.Pool});
         let boroughs = by_size.map(function(d) {return d.Borough_Name});
-        let volume = by_size.map(function(d) {return d.cubic_feet});
-        let incidents_per_pool = by_size.map(function(d) {return d.total_incidents});
+        //let volume = by_size.map(function(d) {return d.cubic_feet});
+        //let incidents_per_pool = by_size.map(function(d) {return d.total_incidents});
+        let volume = by_size.map(d => parseFloat(d.cubic_feet));
+        let incidents_per_pool = by_size.map(d => parseFloat(d.total_incidents));
         let incident_colours = by_size.map(function(d) {return d.total_incidents === '0' ? 'rgba(54, 162, 235, 0.7)' : 'rgba(139, 69, 19, 0.7)'});
+
+        // linear regression extension for chart.js y = mx + b
+        const points = volume.map((x, i) => [x, incidents_per_pool[i]]);
+        const result = regression.linear(points);
+        const gradient = result.equation[0]; // slope m
+        const yIntercept = result.equation[1]; // intercept b
+        console.log(result)
+        console.log(result.r2)
 
         chart_6 = new Chart (canvas6, {
         type: 'scatter',

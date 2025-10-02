@@ -24,7 +24,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- plugin to zoom in -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-zoom/2.2.0/chartjs-plugin-zoom.min.js" integrity="sha512-FRGbE3pigbYamZnw4+uT4t63+QJOfg4MXSgzPn2t8AWg9ofmFvZ/0Z37ZpCawjfXLBSVX2p2CncsmUH2hzsgJg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- linear regression package -->
+        <script src="https://cdn.jsdelivr.net/npm/regression@2.0.1/dist/regression.min.js"></script>
 
+        
     </head>
 
     <body>
@@ -90,7 +93,7 @@
         <div class="chart-container">
             <h2><span class="dot-divider"></span> Poop incidents by pool size</h2>
             <p>
-                Is there a relationship between pool size and number of poops? Maybe. This chart shows a very loose correlation, but without better info about Category 1 situations I'm not sure I'm able to tell for sure.
+                Is there a relationship between pool size and number of poops? Maybe. This chart shows no correlation (r2 = 0), but without better info about Category 1 situations I'm not sure I'm able to tell for sure.
             </p>
             <p>
                 Hover over each dot to see the pool name. Blue dots are pools that may have had no poop incidents at all, but that might be due to errors in my counting method. 
